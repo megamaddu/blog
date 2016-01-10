@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "blog - michaeltrotter.com",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "npm run clean && pulp server",
+    "build": "npm run clean && npm run browserify",
+    "browserify": "pulp browserify -O | uglifyjs - -cm --screw-ie8 > dist/app.js",
+    "test": "npm run clean && pulp test",
+    "clean": "rm -rf .pulp-cache output dist/app.js"
+  },
+  "keywords": [],
+  "author": "Michael Trotter",
+  "license": "ISC",
+  "dependencies": {
+    "virtual-dom": "^2.1.1"
+  },
+  "devDependencies": {
+    "uglifyjs": "^2.4.10"
+  }
+}
