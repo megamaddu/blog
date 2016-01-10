@@ -31,7 +31,7 @@ ui = component render eval
   render state =
     H.div_
       [ H.h1_
-          [ H.text "Toggle Button" ]
+          [ H.text "Toggle Button ... !" ]
       , H.button
           [ E.onClick (E.input_ ToggleState) ]
           [ H.text (if state.on then "On" else "Off") ]
